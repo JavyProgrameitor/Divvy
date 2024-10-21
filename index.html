@@ -6,13 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="./src/js/index.js" defer></script>
   <link rel="stylesheet" href="./src/css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="icon" type="image/png" href="https://img.icons8.com/color/48/000000/javascript.png">
   <title>Divvy</title>
 </head>
 
 <body>
+
   <h1>Divvy</h1>
+  <div>
+    <img src="src/img/beer.png" class="user-icon" width="50px" height="50px">
+    <img src="src/img/car.png" class="user-icon" width="50px" height="50px">
+    <img src="src/img/clothes.png" class="user-icon" width="50px" height="50px">
+    <img src="src/img/food.png" class="user-icon" width="50px" height="50px">
+    <img src="src/img/gas-oil.png" class="user-icon" width="50px" height="50px">
+  </div>
+
   <main>
     <!--Home ------------------------------------------------------------------>
     <div id="home" class="page active">
@@ -50,25 +58,25 @@
         </div>
         <!--iconos of FontAwesom-->
         <div class="icon-selection">
-          <h3>Select an Icon:</h3>
+          <h3>Select Icon:</h3>
           <label>
-            <input type="radio" name="icon" value="fa-user" required />
-            <i class="fa fa-user"></i>
+            <input type="radio" name="icon" value="src/img/woman.png" required />
+            <img src="src/img/woman.png" class="user-icon" width="40px" height="40px">
           </label>
           <label>
-            <input type="radio" name="icon" value="fa-user-circle" required />
-            <i class="fa fa-user-circle"></i>
+            <input type="radio" name="icon" value="src/img/admin.png" required />
+            <img src="src/img/admin.png" class="user-icon" width="40px" height="40px">
           </label>
           <label>
-            <input type="radio" name="icon" value="fa-female" required />
-            <i class="fa fa-female"></i>
+            <input type="radio" name="icon" value="src/img/man.png" required />
+            <img src="src/img/man.png" class="user-icon" width="40px" height="40px">
           </label>
           <label>
-            <input type="radio" name="icon" value="fa-male" required />
-            <i class="fa fa-male"></i>
+            <input type="radio" name="icon" value="src/img/student.png" required />
+            <img src="src/img/student.png" class="user-icon" width="40px" height="40px">
           </label>
         </div>
-        <button id="submit" type="submit">Confirm</button>
+        <button id="submit" class="submit" type="submit">Confirm</button>
       </form>
       <div class="button">
         <button onclick="displayPage('users')">Back</button>
@@ -84,14 +92,15 @@
         </select>
         <label for="amount">Paid:</label>
         <input type="number" id="numberPaid" step="0.01" min="0" placeholder="0.00" required />
-  
+
         <label for="amount">Owed:</label>
         <input type="number" id="numberOwed" step="0.01" min="0" placeholder="0.00" required />
 
         <label for="title">Title:</label>
         <input type="text" id="title" required />
 
-        <button id="submit" type="submit">Confirm</button>
+        <button id="submit" class="submit" type="submit">Confirm</button>
+
       </form>
       <div class="button">
         <button onclick="displayPage('home')">Back</button>
@@ -108,5 +117,15 @@
       </div>
     </div>
   </main>
+
+  <div>
+    <img src="src/img/coffe.png" class="user-icon" width="50px" height="50px">
+    <img src="src/img/home.png" class="user-icon" width="50px" height="50px">
+    <img src="src/img/phone.png" class="user-icon" width="50px" height="50px">
+    <img src="src/img/plane.png" class="user-icon" width="50px" height="50px">
+    <img src="src/img/hotel.png" class="user-icon" width="50px" height="50px">
+  </div>
+
 </body>
+
 </html>

@@ -16,10 +16,10 @@ function UserList() {
 
   users.forEach(user => {
     const userItem = document.createElement('div');
-   // userItem.classList.add('person')
+    // userItem.classList.add('person')
     userItem.innerHTML = `
-         <div class="person">
-          <span><i class='fa ${user.icon}'></i></span>
+          <div class="person">
+          <span><img src="${user.icon}" class="user-icon" width="50px" height="50px"></span>
           <span>${user.name}</span>
         </div>
     `;
@@ -34,7 +34,7 @@ function populateUserSelect() {
 
   users.forEach((user, index) => {
     const option = document.createElement('option');
-    option.value = index; // Index arrau users
+    option.value = index; // Index array users
     option.textContent = user.name;
     userSelect.appendChild(option);
   });
@@ -45,7 +45,7 @@ document.getElementById('userForm').addEventListener('submit', function (event) 
   event.preventDefault();
   const name = document.getElementById('name').value;
   const genre = document.querySelector('input[name="genre"]:checked').value;
-  const icon = document.querySelector('input[name="icon"]:checked').value; // Ajuste aquí
+  const icon = document.querySelector('input[name="icon"]:checked').value;
 
   // Object User
   const newUser = {
@@ -71,15 +71,15 @@ function ExpenseList() {
   <span>User</span>
   <span>Title</span>
   <span>Amount</span>
- </div>`;  
+ </div>`;
   users.forEach(user => {
     user.expenses.forEach(expense => {
 
       const expenseItem = document.createElement('div');
-  
+
       expenseItem.innerHTML = `
          <div class="expense-row">
-          <span><i class='fa ${user.icon}'></i> ${user.name}</span>
+          <span> <span><img src="${user.icon}" class="user-icon" width="30px" height="30px"></span> ${user.name}</span>
           <span>${expense.title}</span>
           <span>${expense.amount.toFixed(2)}€</span>
         </div>
@@ -115,17 +115,12 @@ document.getElementById('expenseForm').addEventListener('submit', function (even
 // Balances------------------------------------------
 function displayBalances() {
   const balanceList = document.getElementById('balanceList');
-  balanceList.innerHTML = ''; // clean
-  //total of all expenses
- // let totalGlobal = users.reduce((sum, user) => {
- //   return sum + user.expenses.reduce((total, expense) => total + expense.amount, 0);
- // }, 0);
+  balanceList.innerHTML = ``; // clean
 
   users.forEach(user => {
     // calculator expenses
     let fullExpenses = user.expenses.reduce((total, expense) => total + expense.amount, 0);
 
-   
     const pronoun = user.genre === 'male' ? 'He' : 'She';
 
     const balanceItem = document.createElement('div');
@@ -133,9 +128,8 @@ function displayBalances() {
 
     balanceItem.innerHTML = `
       <div class="balance-row">
-        <span><i class='fa ${user.icon}'></i>${pronoun}${user.name}</span>
-     
-        <span>Total:${fullExpenses.toFixed(2)}€</span>
+        <span><img src="${user.icon}" class="user-icon" width="50px" height="50px"></span>${pronoun}&nbsp;&nbsp;&nbsp;${user.name}
+        <span>Total: ${fullExpenses.toFixed(2)}€</span>
         <button class="settle-button" onclick="settleBalance(${users.indexOf(user)})">Liquidate</button>
       </div>
     `;
@@ -145,6 +139,7 @@ function displayBalances() {
 }
 // settle debt
 function settleBalance(userIndex) {
-  users[userIndex].expenses = []; 
-  displayBalances(); 
+  users[userIndex].expenses = [];
+  displayBalances();
+  ExpenseList();
 }

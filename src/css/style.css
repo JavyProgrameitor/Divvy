@@ -1,13 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
 *{
-
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 
 }
-
 .page {
   display: none;
 }
@@ -16,28 +14,28 @@
   display: block;
 }
 
-
 body {
 
   border-color: black, 2px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  height: 100vh;
+  height: auto;
   flex-direction: column;
- background: linear-gradient(to bottom, green, yellow);
- font-family: 'Great Vibes', cursive;
+  background: linear-gradient(to bottom, green, yellow);
+  font-family: 'Great Vibes', cursive;
 } 
 
 h1 {
 
   margin: 8px;
   font-family: 'Great Vibes', cursive;
-  font-size: 70px;
+  font-size: 80px;
   font-weight: bolder;
   color: rgb(225, 255, 0);
 
 }
+
 
 h2 {
   color: white;
@@ -73,7 +71,7 @@ label {
 
 #home {
   width: 80vw;
-  height: 70vh;
+  height: auto;
   background: linear-gradient(to bottom, rgba(223, 220, 25, 0.829), rgb(147, 197, 38));
   border-radius: 10px;
   border-style: double;
@@ -82,7 +80,7 @@ label {
 }
 #users {
   width: 80vw;
-  height: 70vh;
+  height: auto;
   background: linear-gradient(to bottom, rgb(176, 230, 14), rgb(247, 151, 8));
   border-radius: 10px;
   border-style: double;
@@ -92,7 +90,7 @@ label {
 }
 #addUser {
   width: 80vw;
-  height: 70vh;
+  height: auto;
   background: linear-gradient(to bottom, rgba(204, 202, 58, 0.829), rgb(190, 92, 7));
   border-radius: 10px;
   border-style: double;
@@ -100,23 +98,24 @@ label {
   margin-bottom: 20px;
 }
 #userForm {
-  width: 90%; /* Hacer el formulario más amplio */
-  max-width: 400px; /* Asegurar que no sea demasiado grande en pantallas grandes */
-  margin: 0 auto; /* Centrar el formulario */
+  width: 90%;
+  height: auto;
+  max-width: 400px; 
+  margin: 0 auto; 
 }
 
 #userForm label {
-  font-size: 40px; /* Ajustar el tamaño de las etiquetas */
+  font-size: 40px; 
   color: rgba(17, 48, 4, 0.982);
 }
 
 #userForm input[type="text"] {
-  width: 70%; /* Hacer que el campo de texto ocupe todo el ancho del formulario */
+  width: 70%; 
   padding: 5px;
   margin-top: 5px;
-  font-size: 25px; /* Tamaño de fuente legible */
+  font-size: 30px; 
   font-family: 'Great Vibes';
-  border-radius: 5px; /* Bordes redondeados */
+  border-radius: 5px; 
 }
 .genre {
   display: flex;
@@ -127,7 +126,7 @@ label {
 
 #addExpense{
   width: 80vw;
-  height: 70vh;
+  height: auto;
   background: linear-gradient(to bottom, rgba(85, 229, 13, 0.396), rgba(7, 190, 47, 0.39));
   border-radius: 10px;
   border-style: double;
@@ -138,7 +137,7 @@ label {
 
 #balances {
   width: 80vw;
-  height: 70vh;
+  height: auto;
   background: linear-gradient(to bottom, rgba(227, 243, 5, 0.968), rgb(7, 190, 19));
   border-radius: 10px;
   border-style: double;
@@ -175,20 +174,18 @@ button:hover {
   justify-content: space-evenly;
   align-items: center;
 }
-#submit {
-  background-color: rgb(207, 127, 7);
-  color: white;              
-  font-size: 30px;         
-  border-radius: 20px;        
-  border: none;           
-  cursor: pointer;           
-  transition: background-color 0.3s ease; 
+
+.submit {
+  width: 40%;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 10px 0;
+  border-radius: 25px; 
+  cursor: pointer;
+  box-shadow: #2b502d;
 }
 
-#submit:hover {
-  background-color: rgba(207, 127, 7, 0.9);
-  transform: scale(1.05); 
-}
 
 #userlist {
   list-style-type: none;
@@ -206,48 +203,36 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%; 
 }
 
 form input,
 form select,
 form button {
-  margin: 10px 0;
-  width: 80%; 
-  padding: 8px;
-  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  margin: 8px;
+  width: 60%; 
+  padding: 5px;
+  font-size: 15px;
+  color: #2b502d;
+  font-style: italic;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background: linear-gradient(to bottom, rgb(238, 240, 214), rgb(132, 127, 39));
 }
 
 /* Icon styles */
 .icon-selection {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  margin: 10px 0;
-}
-
-.icon-selection label {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  cursor: pointer;
-}
-
-.icon-selection i {
-  font-size: 35px;
-  margin: 8px;
-  color: rgb(227, 222, 141);
-  transition: transform 0.3s ease;
 }
 
 .icon-selection input {
   display: none; 
 }
 
-.icon-selection input:checked + i {
-  color: #4CAF50;
-  transform: scale(1.2);
-}
+
 .person {
   display: flex;
   font-size: 45px;
@@ -257,11 +242,34 @@ form button {
   color: #2e7130;
 }
 
+.user-icon {
+  margin: 5px;
+  border-radius: 50%; 
+  background: linear-gradient(to bottom, rgb(238, 240, 214), rgb(238, 227, 19));
+  padding: 5px; 
+  border: 2px solid transparent; /* Borde inicial */
+  transition: transform 0.3s ease, border-color 0.3s ease; /* Transición suave */
+}
+
+
+.user-icon:hover {
+  transform: scale(1.1); 
+  border-color: #4caf50; 
+}
+
+input[type="radio"]:checked + .user-icon {
+  border-color: #4caf50; 
+   background: linear-gradient(to bottom, rgb(238, 240, 214), rgb(48, 238, 19));
+
+}
+
+
 .expense-list {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  font-size: 40px;
+  justify-content: space-between;
+  padding: 8px;
+  font-size: 25px;
   font-weight: bold;
   color: #2e7130;
 
@@ -270,40 +278,48 @@ form button {
 .expense-row {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  font-size: 30px;
+  justify-content: space-between;
+  font-size: 18px;
   font-weight: bold;
   color: #2e7130;
   border: 1px solid #ccc;
-  padding: 10px;
+  padding: 4px;
   margin: 10px;
   border-radius: 8px;
   background: linear-gradient(to bottom, rgba(227, 243, 5, 0.968), rgb(172, 174, 44));
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Estilos para la lista de balances */
 .balance-item {
   padding: 10px;
   border-bottom: 1px solid #ccc;
   margin-bottom: 5px;
 }
 
+
 .balance-row {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   font-size: 30px;
   font-weight: bold;
   color: #2e7130;
+  flex-direction: column;
+  align-content: stretch;
+  align-items: center;  padding: 10px;
+  margin: 10px;
+  border-radius: 8px;
+  background: linear-gradient(to bottom, rgba(227, 243, 5, 0.968), rgb(172, 174, 44));
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .settle-button {
   background-color: rgb(207, 127, 7);
   color: white;
   border: none;
-  padding: 5px 10px;
+  padding: 5px 5px;
   cursor: pointer;
   border-radius: 5px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .settle-button:hover {
