@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+*{
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+.page {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+
+body {
+
+  border-color: black, 2px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+ background: linear-gradient(to bottom, green, yellow);
+ font-family: 'Great Vibes', cursive;
+} 
+
+h1 {
+
+  margin: 8px;
+  font-family: 'Great Vibes', cursive;
+  font-size: 70px;
+  font-weight: bolder;
+  color: rgb(225, 255, 0);
+
+}
+
+h2 {
+  color: white;
+  margin-top: 5px;
+  font-family: 'Great Vibes', cursive;
+  font-size: 35px;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+h3 {
+
+  margin-top: 20px;
+  font-family: 'Great Vibes', cursive;
+  font-size: 30px;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(225, 255, 0);
+  
+}
+
+label {
+  color: rgba(17, 48, 4, 0.982);
+  margin-top: 5px;
+  font-family: 'Great Vibes', cursive;
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+#home {
+  width: 80vw;
+  height: 70vh;
+  background: linear-gradient(to bottom, rgba(223, 220, 25, 0.829), rgb(147, 197, 38));
+  border-radius: 10px;
+  border-style: double;
+  box-shadow: 3px 3px 40px rgba(0, 0, 0, 0.8);
+  margin-bottom: 20px;
+}
+#users {
+  width: 80vw;
+  height: 70vh;
+  background: linear-gradient(to bottom, rgb(176, 230, 14), rgb(247, 151, 8));
+  border-radius: 10px;
+  border-style: double;
+  box-shadow: 3px 3px 40px rgba(0, 0, 0, 0.8);
+  margin-bottom: 20px;
+
+}
+#addUser {
+  width: 80vw;
+  height: 70vh;
+  background: linear-gradient(to bottom, rgba(204, 202, 58, 0.829), rgb(190, 92, 7));
+  border-radius: 10px;
+  border-style: double;
+  box-shadow: 3px 3px 40px rgba(0, 0, 0, 0.8);
+  margin-bottom: 20px;
+}
+#userForm {
+  width: 90%; /* Hacer el formulario más amplio */
+  max-width: 400px; /* Asegurar que no sea demasiado grande en pantallas grandes */
+  margin: 0 auto; /* Centrar el formulario */
+}
+
+#userForm label {
+  font-size: 40px; /* Ajustar el tamaño de las etiquetas */
+  color: rgba(17, 48, 4, 0.982);
+}
+
+#userForm input[type="text"] {
+  width: 70%; /* Hacer que el campo de texto ocupe todo el ancho del formulario */
+  padding: 5px;
+  margin-top: 5px;
+  font-size: 25px; /* Tamaño de fuente legible */
+  font-family: 'Great Vibes';
+  border-radius: 5px; /* Bordes redondeados */
+}
+.genre {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+#addExpense{
+  width: 80vw;
+  height: 70vh;
+  background: linear-gradient(to bottom, rgba(85, 229, 13, 0.396), rgba(7, 190, 47, 0.39));
+  border-radius: 10px;
+  border-style: double;
+  box-shadow: 3px 3px 40px rgba(0, 0, 0, 0.8);
+  margin-bottom: 20px;
+
+}
+
+#balances {
+  width: 80vw;
+  height: 70vh;
+  background: linear-gradient(to bottom, rgba(227, 243, 5, 0.968), rgb(7, 190, 19));
+  border-radius: 10px;
+  border-style: double;
+  box-shadow: 3px 3px 40px rgba(0, 0, 0, 0.8);
+  margin-bottom: 20px;
+
+}
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 8px;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: lighter;
+  color: white;
+  background-color: rgb(207, 127, 7);
+  font-family: 'Great Vibes';
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+  background-color: rgba(207, 127, 7, 0.9);
+  transform: scale(1.05); 
+}
+
+.button {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#submit {
+  background-color: rgb(207, 127, 7);
+  color: white;              
+  font-size: 30px;         
+  border-radius: 20px;        
+  border: none;           
+  cursor: pointer;           
+  transition: background-color 0.3s ease; 
+}
+
+#submit:hover {
+  background-color: rgba(207, 127, 7, 0.9);
+  transform: scale(1.05); 
+}
+
+#userlist {
+  list-style-type: none;
+  padding: 0;
+}
+
+#userlist li {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; 
+}
+
+form input,
+form select,
+form button {
+  margin: 10px 0;
+  width: 80%; 
+  padding: 8px;
+  font-size: 1rem;
+}
+
+/* Icon styles */
+.icon-selection {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.icon-selection label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.icon-selection i {
+  font-size: 35px;
+  margin: 8px;
+  color: rgb(227, 222, 141);
+  transition: transform 0.3s ease;
+}
+
+.icon-selection input {
+  display: none; 
+}
+
+.icon-selection input:checked + i {
+  color: #4CAF50;
+  transform: scale(1.2);
+}
+.person {
+  display: flex;
+  font-size: 45px;
+  margin: 8px;
+  justify-content: space-around;
+  align-items: center;
+  color: #2e7130;
+}
+
+.expense-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 40px;
+  font-weight: bold;
+  color: #2e7130;
+
+}
+
+.expense-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 30px;
+  font-weight: bold;
+  color: #2e7130;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 8px;
+  background: linear-gradient(to bottom, rgba(227, 243, 5, 0.968), rgb(172, 174, 44));
+}
+
+/* Estilos para la lista de balances */
+.balance-item {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 5px;
+}
+
+.balance-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 30px;
+  font-weight: bold;
+  color: #2e7130;
+}
+
+.settle-button {
+  background-color: rgb(207, 127, 7);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.settle-button:hover {
+  background-color: rgba(207, 127, 7, 0.9);
+}

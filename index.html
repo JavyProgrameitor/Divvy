@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="./src/js/index.js" defer></script>
+  <link rel="stylesheet" href="./src/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="icon" type="image/png" href="https://img.icons8.com/color/48/000000/javascript.png">
+  <title>Divvy</title>
+</head>
+
+<body>
+  <h1>Divvy</h1>
+  <main>
+    <!--Home ------------------------------------------------------------------>
+    <div id="home" class="page active">
+      <h2>Home</h2>
+      <div id="expenselist">
+        <!-- Expense List input -->
+      </div>
+      <div class="button">
+        <button onclick="displayPage('addExpense')">Add Expense (+)</button>
+        <button onclick="displayPage('users')">Users</button>
+        <button onclick="displayPage('balances'); displayBalances();">Balances</button>
+      </div>
+    </div>
+    <!--  Users ------------------------------------------------------------------->
+    <div id="users" class="page">
+      <h2>Users-list</h2>
+      <ul id="userList">
+        <!-- addUser input -->
+      </ul>
+      <div class="button">
+        <button onclick="displayPage('home')">Home</button>
+        <button onclick="displayPage('addUser')">Add-Users</button>
+      </div>
+    </div>
+    <!--  Add Users ------------------------------------------------------------------>
+    <div id="addUser" class="page">
+      <h2>Add-Users</h2>
+      <form id="userForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="username" required />
+        <h3>Genre:</h3>
+        <div class="genre">
+          <label><input type="radio" id="female" name="genre" value="female" required /> Female</label>
+          <label><input type="radio" id="male" name="genre" value="male" required /> Male</label>
+        </div>
+        <!--iconos of FontAwesom-->
+        <div class="icon-selection">
+          <h3>Select an Icon:</h3>
+          <label>
+            <input type="radio" name="icon" value="fa-user" required />
+            <i class="fa fa-user"></i>
+          </label>
+          <label>
+            <input type="radio" name="icon" value="fa-user-circle" required />
+            <i class="fa fa-user-circle"></i>
+          </label>
+          <label>
+            <input type="radio" name="icon" value="fa-female" required />
+            <i class="fa fa-female"></i>
+          </label>
+          <label>
+            <input type="radio" name="icon" value="fa-male" required />
+            <i class="fa fa-male"></i>
+          </label>
+        </div>
+        <button id="submit" type="submit">Confirm</button>
+      </form>
+      <div class="button">
+        <button onclick="displayPage('users')">Back</button>
+      </div>
+    </div>
+    <!--Add expense------------------------------------------------------->
+    <div id="addExpense" class="page">
+      <h2>Add an expense</h2>
+      <form id="expenseForm">
+        <label for="user">User:</label>
+        <select id="userSelect" required>
+          <!-- Users from  JS -->
+        </select>
+        <label for="amount">Paid:</label>
+        <input type="number" id="numberPaid" step="0.01" min="0" placeholder="0.00" required />
+  
+        <label for="amount">Owed:</label>
+        <input type="number" id="numberOwed" step="0.01" min="0" placeholder="0.00" required />
+
+        <label for="title">Title:</label>
+        <input type="text" id="title" required />
+
+        <button id="submit" type="submit">Confirm</button>
+      </form>
+      <div class="button">
+        <button onclick="displayPage('home')">Back</button>
+      </div>
+    </div>
+    <!--Balances-------------------------------------------------------------------->
+    <div id="balances" class="page">
+      <h2>Balances</h2>
+      <div id="balanceList">
+        <!-- Create expense of user from JS -->
+      </div>
+      <div class="button">
+        <button onclick="displayPage('home')">Home</button>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
