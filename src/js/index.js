@@ -9,6 +9,16 @@ function displayPage(pageID) {
   document.getElementById(pageID).classList.add('active');
 }
 
+document.querySelectorAll('.genre label').forEach(label => {
+  label.addEventListener('click', () => {
+    if (label.id === 'genreFemale') {
+      document.getElementById('female').checked = true;
+    } else if (label.id === 'genreMale') {
+      document.getElementById('male').checked = true;
+    }
+  });
+});
+
 //  Users List
 function UserList() {
   const userList = document.getElementById('userList');

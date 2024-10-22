@@ -114,7 +114,8 @@ label {
   padding: 5px;
   margin-top: 5px;
   font-size: 30px; 
-  font-family: 'Great Vibes';
+  font-weight: bold;
+  font-family:'Courier New', Courier, monospace;
   border-radius: 5px; 
 }
 .genre {
@@ -122,6 +123,25 @@ label {
   align-items: center;
   justify-content: center;
 
+}
+.genre input[type="radio"] {
+  display: none;
+}
+
+.genre label {
+  cursor: pointer;
+  padding: 5px;
+}
+
+.genre label:hover {
+  padding: 10px;
+  background-color: #f9dd04;
+  border-radius: 20px;
+}
+.genre input[type="radio"]:checked + label {
+  background-color: #f9dd04;
+  border-radius: 20px;
+  padding: 10px;
 }
 
 #addExpense{
