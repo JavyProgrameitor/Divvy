@@ -16,23 +16,28 @@
 
 body {
 
-  border-color: black, 2px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   height: auto;
   flex-direction: column;
-  background: linear-gradient(to bottom, green, yellow);
+  background-image: url('../img/divyyCover.jpeg'); /* Ruta de la imagen de fondo */
+  background-size: cover; /* La imagen cubre todo el área, manteniendo la proporción */
+  background-position: center; /* La imagen se centra */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-attachment: fixed;
   font-family: 'Great Vibes', cursive;
 } 
 
 h1 {
 
-  margin: 8px;
+  margin-top: 50px;
+  margin-bottom: 20px;
   font-family: 'Great Vibes', cursive;
-  font-size: 80px;
-  font-weight: bolder;
-  color: rgb(225, 255, 0);
+  font-size: 100px;
+  font-weight: bold;
+  color: rgb(246, 246, 22);
+  text-shadow: 20px 20px 40px rgba(0, 0, 0, 0.7);
 
 }
 
@@ -52,7 +57,7 @@ h3 {
 
   margin-top: 20px;
   font-family: 'Great Vibes', cursive;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: bolder;
   display: flex;
   justify-content: center;
@@ -118,36 +123,34 @@ label {
   font-family:'Courier New', Courier, monospace;
   border-radius: 5px; 
 }
+
 .genre {
   display: flex;
   align-items: center;
   justify-content: center;
-
-}
-.genre input[type="radio"] {
-  display: none;
+  margin: 5px;
 }
 
 .genre label {
   cursor: pointer;
-  padding: 5px;
+  padding: 8px;
+  border: 2px solid blue;
+  margin: 5px;
+  border-radius: 20px;
 }
 
 .genre label:hover {
-  padding: 10px;
+  transform: scale(1.1);
   background-color: #f9dd04;
-  border-radius: 20px;
+  border-color: #e64b18;
 }
-.genre input[type="radio"]:checked + label {
-  background-color: #f9dd04;
-  border-radius: 20px;
-  padding: 10px;
-}
+
+
 
 #addExpense{
   width: 80vw;
   height: auto;
-  background: linear-gradient(to bottom, rgba(85, 229, 13, 0.396), rgba(7, 190, 47, 0.39));
+  background: linear-gradient(to bottom, rgb(30, 109, 88), rgb(3, 248, 56));
   border-radius: 10px;
   border-style: double;
   box-shadow: 3px 3px 40px rgba(0, 0, 0, 0.8);
@@ -241,7 +244,18 @@ form button {
   background: linear-gradient(to bottom, rgb(238, 240, 214), rgb(132, 127, 39));
 }
 
+.person {
+  display: flex;
+  font-size: 45px;
+  margin: 8px;
+  justify-content: space-around;
+  align-items: center;
+  color: #2e7130;
+}
+
+
 /* Icon styles */
+
 .icon-selection {
   display: flex;
   justify-content: space-between;
@@ -252,35 +266,33 @@ form button {
   display: none; 
 }
 
-
-.person {
+.expenseIcons {
   display: flex;
-  font-size: 45px;
-  margin: 8px;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  color: #2e7130;
+}
+.expenseIcons input {
+  display: none;
 }
 
 .user-icon {
+  border: 2px solid blue;
   margin: 5px;
   border-radius: 50%; 
   background: linear-gradient(to bottom, rgb(238, 240, 214), rgb(238, 227, 19));
-  padding: 5px; 
-  border: 2px solid transparent; /* Borde inicial */
-  transition: transform 0.3s ease, border-color 0.3s ease; /* Transición suave */
+  padding: 2px; 
+  transition: transform 0.3s ease, border-color blue 0.3s ease; 
 }
 
 
 .user-icon:hover {
   transform: scale(1.1); 
-  border-color: #4caf50; 
+  border-color: #e64b18; 
 }
 
 input[type="radio"]:checked + .user-icon {
-  border-color: #4caf50; 
-   background: linear-gradient(to bottom, rgb(238, 240, 214), rgb(48, 238, 19));
-
+   background: linear-gradient(to bottom, rgb(238, 240, 214), rgb(23, 96, 12));
+   border-color: #db1212; 
 }
 
 

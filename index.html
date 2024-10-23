@@ -13,13 +13,6 @@
 <body>
 
   <h1>Divvy</h1>
-  <div>
-    <img src="src/img/beer.png" class="user-icon" width="50px" height="50px">
-    <img src="src/img/car.png" class="user-icon" width="50px" height="50px">
-    <img src="src/img/clothes.png" class="user-icon" width="50px" height="50px">
-    <img src="src/img/food.png" class="user-icon" width="50px" height="50px">
-    <img src="src/img/gas-oil.png" class="user-icon" width="50px" height="50px">
-  </div>
 
   <main>
     <!--Home ------------------------------------------------------------------>
@@ -58,24 +51,23 @@
           <label id="genreMale" for="male">Male</label>
           <input type="radio" id="male" name="genre" value="male" required />
         </div>
-        <!--iconos of FontAwesom-->
         <div class="icon-selection">
           <h3>Select Icon:</h3>
           <label>
             <input type="radio" name="icon" value="src/img/woman.png" required />
-            <img src="src/img/woman.png" class="user-icon" width="40px" height="40px">
+            <img src="src/img/woman.png" class="user-icon" width="50px" height="50px">
           </label>
           <label>
             <input type="radio" name="icon" value="src/img/admin.png" required />
-            <img src="src/img/admin.png" class="user-icon" width="40px" height="40px">
+            <img src="src/img/admin.png" class="user-icon" width="50px" height="50px">
           </label>
           <label>
             <input type="radio" name="icon" value="src/img/man.png" required />
-            <img src="src/img/man.png" class="user-icon" width="40px" height="40px">
+            <img src="src/img/man.png" class="user-icon" width="50px" height="50px">
           </label>
           <label>
             <input type="radio" name="icon" value="src/img/student.png" required />
-            <img src="src/img/student.png" class="user-icon" width="40px" height="40px">
+            <img src="src/img/student.png" class="user-icon" width="50px" height="50px">
           </label>
         </div>
         <button id="submit" class="submit" type="submit">Confirm</button>
@@ -95,11 +87,57 @@
         <label for="amount">Paid:</label>
         <input type="number" id="numberPaid" step="0.01" min="0" placeholder="0.00" required />
 
-        <label for="amount">Owed:</label>
-        <input type="number" id="numberOwed" step="0.01" min="0" placeholder="0.00" required />
-
         <label for="title">Title:</label>
         <input type="text" id="title" required />
+
+        <h3>Select Icon for Expense:</h3>
+        <div class="expenseIcons">
+          <!-- Icons from before and after the main -->
+          <label>
+            <input type="radio" name="expenseIcon" value="src/img/beer.png" required />
+            <img src="src/img/beer.png" class="user-icon" width="50px" height="50px">
+          </label>
+          <label>
+            <input type="radio" name="expenseIcon" value="src/img/car.png" required />
+            <img src="src/img/car.png" class="user-icon" width="50px" height="50px">
+          </label>
+          <label>
+            <input type="radio" name="expenseIcon" value="src/img/clothes.png" required />
+            <img src="src/img/clothes.png" class="user-icon" width="50px" height="50px">
+          </label>
+          <label>
+            <input type="radio" name="expenseIcon" value="src/img/food.png" required />
+            <img src="src/img/food.png" class="user-icon" width="50px" height="50px">
+          </label>
+          <label>
+            <input type="radio" name="expenseIcon" value="src/img/gas-oil.png" required />
+            <img src="src/img/gas-oil.png" class="user-icon" width="50px" height="50px">
+          </label>
+        </div>
+        <div class="expenseIcons">
+          <!-- Add the icons from below the main -->
+          <label>
+            <input type="radio" name="expenseIcon" value="src/img/coffe.png" required />
+            <img src="src/img/coffe.png" class="user-icon" width="50px" height="50px">
+          </label>
+          <label>
+            <input type="radio" name="expenseIcon" value="src/img/home.png" required />
+            <img src="src/img/home.png" class="user-icon" width="50px" height="50px">
+          </label>
+          <label>
+            <input type="radio" name="expenseIcon" value="src/img/phone.png" required />
+            <img src="src/img/phone.png" class="user-icon" width="50px" height="50px">
+          </label>
+          <label>
+            <input type="radio" name="expenseIcon" value="src/img/plane.png" required />
+            <img src="src/img/plane.png" class="user-icon" width="50px" height="50px">
+          </label>
+          <label>
+            <input type="radio" name="expenseIcon" value="src/img/hotel.png" required />
+            <img src="src/img/hotel.png" class="user-icon" width="50px" height="50px">
+          </label>
+        </div>
+
 
         <button id="submit" class="submit" type="submit">Confirm</button>
 
@@ -120,13 +158,6 @@
     </div>
   </main>
 
-  <div>
-    <img src="src/img/coffe.png" class="user-icon" width="50px" height="50px">
-    <img src="src/img/home.png" class="user-icon" width="50px" height="50px">
-    <img src="src/img/phone.png" class="user-icon" width="50px" height="50px">
-    <img src="src/img/plane.png" class="user-icon" width="50px" height="50px">
-    <img src="src/img/hotel.png" class="user-icon" width="50px" height="50px">
-  </div>
 
 </body>
 

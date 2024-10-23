@@ -1,7 +1,7 @@
 // Init arrays
 let users = [];
 let expenses = [];
-
+let balance = 0;
 // select page
 function displayPage(pageID) {
   const pages = document.querySelectorAll('.page');
@@ -9,15 +9,6 @@ function displayPage(pageID) {
   document.getElementById(pageID).classList.add('active');
 }
 
-document.querySelectorAll('.genre label').forEach(label => {
-  label.addEventListener('click', () => {
-    if (label.id === 'genreFemale') {
-      document.getElementById('female').checked = true;
-    } else if (label.id === 'genreMale') {
-      document.getElementById('male').checked = true;
-    }
-  });
-});
 
 //  Users List
 function UserList() {
@@ -26,7 +17,6 @@ function UserList() {
 
   users.forEach(user => {
     const userItem = document.createElement('div');
-    // userItem.classList.add('person')
     userItem.innerHTML = `
           <div class="person">
           <span><img src="${user.icon}" class="user-icon" width="50px" height="50px"></span>
@@ -62,7 +52,8 @@ document.getElementById('userForm').addEventListener('submit', function (event) 
     name,
     genre,
     icon,
-    expenses: []
+    expenses: [],
+    balance: 0
   };
 
   users.push(newUser);
@@ -84,13 +75,12 @@ function ExpenseList() {
  </div>`;
   users.forEach(user => {
     user.expenses.forEach(expense => {
-
       const expenseItem = document.createElement('div');
 
       expenseItem.innerHTML = `
          <div class="expense-row">
-          <span> <span><img src="${user.icon}" class="user-icon" width="30px" height="30px"></span> ${user.name}</span>
-          <span>${expense.title}</span>
+          <span> <span><img src="${user.icon}" class="user-icon" width="40px" height="40px"></span> ${user.name}</span>
+          <span><span><img src="${expense.icon}" class="user-icon" width="40px" height="40px"></span> ${expense.title}</span>
           <span>${expense.amount.toFixed(2)}€</span>
         </div>
       `;
@@ -104,18 +94,25 @@ function ExpenseList() {
 document.getElementById('expenseForm').addEventListener('submit', function (event) {
   event.preventDefault();
 
-  const selectedUserIndex = document.getElementById('userSelect').value; // Índice del usuario seleccionado
+  const selectedUserIndex = document.getElementById('userSelect').value; // Index user
   const paid = document.getElementById('numberPaid').value;
-  const owed = document.getElementById('numberOwed').value;
   const title = document.getElementById('title').value;
-  const amount = paid - owed;
-  // Object expense
-  const newExpense = {
-    amount: parseFloat(amount),
-    title
-  };
+  const selectIcon = document.querySelector('input[name="expenseIcon"]:checked').value;
+ // const amount = paid - owed;
+  const amount = paid / users.length;
 
-  users[selectedUserIndex].expenses.push(newExpense);
+  users.forEach((user, index) => {
+    const amountOwed = index === parseFloat(selectedUserIndex) ? paid : -amount;
+    const newExpense = {
+      amount: parseFloat (amountOwed),
+      title,
+      icon: selectIcon
+    };
+    user.expenses.push(newExpense);
+    user.balance += amountOwed;
+    
+  });
+
 
   ExpenseList();
   document.getElementById('expenseForm').reset();
@@ -149,7 +146,9 @@ function displayBalances() {
 }
 // settle debt
 function settleBalance(userIndex) {
+  users[userIndex].balance = 0;
   users[userIndex].expenses = [];
   displayBalances();
   ExpenseList();
 }
+
