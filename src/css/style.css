@@ -6,6 +6,23 @@
   box-sizing: border-box;
 
 }
+
+.return-button {
+  position: absolute;
+  left: 25px; 
+  top: 50px; 
+  transform: translateY(-50%); 
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(to bottom, rgba(223, 187, 25, 0.829), rgb(207, 127, 7));
+  font-weight: bold;
+   font-size: 25px;
+   color: rgb(238, 236, 231);
+  cursor: pointer
+}
+
+
 .page {
   display: none;
 }
@@ -21,10 +38,10 @@ body {
   align-items: center;
   height: auto;
   flex-direction: column;
-  background-image: url('../img/divyyCover.jpeg'); /* Ruta de la imagen de fondo */
-  background-size: cover; /* La imagen cubre todo el área, manteniendo la proporción */
-  background-position: center; /* La imagen se centra */
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-image: url('../img/divyyCover.jpeg');
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat; 
   background-attachment: fixed;
   font-family: 'Great Vibes', cursive;
 } 
@@ -354,3 +371,5 @@ input[type="radio"]:checked + .user-icon {
 .settle-button:hover {
   background-color: rgba(207, 127, 7, 0.9);
 }
+
+
