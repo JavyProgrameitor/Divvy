@@ -146,20 +146,13 @@ label {
   justify-content: center;
 }
 
-.genre label {
-  cursor: pointer;
-  padding: 5px;
-  border: 2px solid blue;
-  border-radius: 50%;
-}
-
 .genre label:hover {
   transform: scale(1.1);
   background-color: #f9dd04;
-  border-color: #e64b18;
+  border-radius: 10px;
+  transform: scale(1.1); 
+  border-color: #e64b18; 
 }
-
-
 
 #addExpense{
   width: 80vw;
