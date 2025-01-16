@@ -98,7 +98,7 @@ document.getElementById('expenseForm').addEventListener('submit', function (even
   const paid = document.getElementById('numberPaid').value;
   const title = document.getElementById('title').value;
   const selectIcon = document.querySelector('input[name="expenseIcon"]:checked').value;
- // const amount = paid - owed;
+
   const amount = paid / users.length;
 
   users.forEach((user, index) => {
@@ -125,8 +125,16 @@ function displayBalances() {
   balanceList.innerHTML = ``; // clean
 
   users.forEach(user => {
-    // calculator expenses
-    let fullExpenses = user.expenses.reduce((total, expense) => total + expense.amount, 0);
+    let totalPaid = 0;
+    let totalOwed = 0;
+
+    user.expenses.forEach(expense => {
+      if (expense.amount > 0) {
+        totalPaid += expense.amount;
+      } else {
+        totalOwed += Math.abs(expense.amount);
+      }
+    });
 
     const pronoun = user.genre === 'male' ? 'He' : 'She';
 
@@ -135,9 +143,10 @@ function displayBalances() {
 
     balanceItem.innerHTML = `
       <div class="balance-row">
-        <span><img src="${user.icon}" class="user-icon" width="50px" height="50px"></span>${pronoun}&nbsp;&nbsp;&nbsp;${user.name}
-        <span>Total: ${fullExpenses.toFixed(2)}€</span>
-        <button class="settle-button" onclick="settleBalance(${users.indexOf(user)})">Liquidate</button>
+        <span><img src="${user.icon}" class="user-icon" width="50px" height="50px"></span>${pronoun} ${user.name}<br>
+        <span>Paid: ${totalPaid.toFixed(2)}€</span><br>
+        <span>Owend: ${totalOwed.toFixed(2)}€</span><br>
+        <button class="settle-button" onclick="settleBalance(${users.indexOf(user)})">Resets</button>
       </div>
     `;
 
